@@ -1,6 +1,6 @@
 '''
 Sanjana Gadaginmath
-CIS 41A   Fall 2021
+CIS 41A   Fall 2022
 Unit A, Problem A 
 '''
 import math
