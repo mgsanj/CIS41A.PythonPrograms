@@ -287,6 +287,103 @@ Raging Bull:1980
 - Loop through the dictionary items and print the year in which each movie was made. Output should be alpha sorted by movie title.
 
 ### Problem E
+**First Script – Decision Making**
+
+Write a script that can determine where different plants can be planted.
+
+Each plant has a name, a type (Flower, Vegetable, Tree, etc.), and a maximum height.
+There are three gardens as follows:
+
+- The Vegetable Garden can have only Vegetables, and there is no maximum height.
+- The Low Garden can have only Flowers, and there is a maximum height of 3.
+- The High Garden can have only Flowers, and there is a maximum height of 6.
+
+Print ONE line that identifies the one or more gardens that a given plant can be planted in. If a plant does not match the criteria for any of the gardens, then say so.
+
+Test the script six times with the following test data:
+
+1. Name: Lily, Type: Flower, Height 3
+2. Name: Bonsai, Type: Tree, Height 2
+3. Name: Carrots, Type: Vegetable, Height 1
+4. Name: Corn, Type: Vegetable, Height 8
+4. Name: Rose, Type: Flower, Height 5
+5. Name: Sunflower, Type: Flower, Height 8
+
+Example output:
+<pre>
+Please enter the plant name: Lily 
+Please enter the plant type: Flower 
+Please enter the plant height: 3 
+A Lily can be planted in the Low Garden or the High Garden.
+and so on...
+</pre>
+
+**Second Script – Guessing Game**
+
+Write a script that plays a simple guessing game.
+The script will generate a secret number from 1 to 100, inclusive, and the user will have to guess the number.
+After each guess, the script will tell the user if they are high, low, or correct.
+If they are correct, the script will congratulate the user, tell them how many guesses they took, and then end the script.
+
+Hint: most of the game code will be in a loop that repeats until the correct number is guessed.
+
+To generate the secret number, you will need to use the randint function from Python's Random module
+
+Example output:
+<pre>
+Welcome to the guessing game.
+You need to guess a number from 1 to 100.
+What is your guess? 50
+Guess is too low.
+What is your guess? 75
+Guess is too low.
+What is your guess? 87
+Guess is too high.
+What is your guess? 81
+Guess is too low.
+What is your guess? 84
+Guess is too low.
+What is your guess? 85
+Congratulations!
+You guessed the secret number in 6 guesses!
+</pre>
+
+**Third Script – has two parts**
+
+_Part One – Looping with String Methods_
+
+Update the Unit B Counting and Finding In-Class exercise to use a loop.
+
+- Assign the text "Believe you can and you're halfway there." to a variable called quote (this is a quote from Theodore Roosevelt).
+- Loop through the quote to find and print the index of all the "a" characters.
+
+Hint: One way is to loop a fixed number of times, based on the count of the "a" characters.
+Another way is to loop until you have searched the entire string.
+It can be convenient to initialize the location variable before starting the loop.
+
+_Part Two – Nested Loops_
+
+Write a script using nested for loops to generate a triangular multiplication table as illustrated below.
+Ask the user how many rows they would like in their table.
+Generate formatted output where each number is right justified within a fixed field size, so that the numbers in each column are aligned.
+
+Test with a user value of 12 rows.
+
+Example output:
+<pre>
+a found at index 13
+a found at index 16
+a found at index 28
+a found at index 32
+
+Please enter the number of rows for the multiplication table: 12
+   1
+   2   4
+   3   6   9
+   4   8  12  16
+   5  10  15  20  25
+   and so on...
+</pre>
 
 
 
