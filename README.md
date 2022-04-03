@@ -384,8 +384,226 @@ Please enter the number of rows for the multiplication table: 12
    5  10  15  20  25
    and so on...
 </pre>
+___________________
+## Unit F
+### Exercise F
+**Part One – Using a main function, Docstrings**
 
+Write a function called hello. The function has no arguments and no return value. It simply prints the text "Hello World". Include a docstring that describes the function.
 
+Write a main function, as described by the Python main function reading.
 
+Call main, as described by the Python main function reading.
+
+From main, call hello and then print hello’s docstring.
+
+**Part Two – Error Handling**
+
+Write a function called printListElement. The function has two arguments and no return value. The first argument is a list, and the second argument is a list index. The function will print an element from the list as determined by the list index. If the list index is invalid, print an error message.
+
+We could accomplish this with a logic test, but instead, we will manage this with error handling.
+
+Write a try block that attempts to print the list element. Catch any errors with an except block, print an error message.
+
+From main, create a myList list with elements 0, 1, 2 by using the list and range commands.
+
+Then, call printListElement with your list and a list index value of 3.
+
+**Part Three – How Python function arguments are treated**
+
+There can be some confusion as to how Python functions treat their arguments - is it by reference or by value? Explore this for yourself.
+
+From main, create a myInt variable and give it the value 3. Also create a myList list with elements 0, 1, 2.
+
+Print the IDs of myInt and myList. Also print the ID of the last element of myList.
+
+Now create a function called byVal which has one argument. In the function, add 7 to the argument. Print the ID of the argument before and after the change.
+
+Create a second function called byRef which has one argument. In the function, add 7 to the last element in the list. Print the ID of the argument and the ID of the last element of the argument before and after the change.
+
+Now call byVal with myInt and then call byRef with myList. Next, again print the IDs of MyInt, myList, and the last element of myList. Finally, print myInt and MyList from main. Can you explain the results?
+
+### Problem F
+**Part One – Keyword Arguments and Default Values**
+
+Write an invoice function.\
+The function will generate a simple invoice and will have two required arguments and two keyword arguments.\
+The two required arguments are unitPrice and quantity.\
+The first keyword argument is shipping, and it has a default value of 10.\
+The second keyword argument is handling, and it has a default value of 5.
+
+Test it twice from main:\
+First test: unitPrice 20, quantity 4, and shipping 8 (handling is not specified).\
+Second test: unitPrice 15, quantity 3, and handling 15 (shipping is not specified).\
+Don't worry about making the formatting pretty.
+
+**Part Two – args (Variable-Length Arguments)**
+
+Write a printGroupMembers function.\
+The function prints a list of students who are working together on a group project, as well as the group name.\
+The function has one required argument, the group name, and one variable-length argument that contains the student names.
+
+Test it twice from main:\
+First test: Call as follows:\
+printGroupMembers("Group A", "Li", "Audry",\ "Jia")\
+Second test: Create a list as follows:
+groupB = \["Group B", "Sasha", "Migel", "Tanya", "Hiroto"\]
+and then call the function using this list.\
+
+**Part Three – kwargs (Variable-Length Keyword Arguments)**
+
+For this problem, imagine that there is a complex piece of equipment, perhaps a car or a spacecraft, and that all of its various subsystems periodically send out status messages to be read and evaluated by an overseer system. Each message contains just a small amount of data - perhaps only one or two keywords out of the hundreds of things that overseer system must monitor. However, we will restrict ourselves to only three things: temperature, CO2level, and miscError.
+
+Write an overseerSystem function that has a kwargs argument.
+
+Within the function, see if the keyword temperature exists in kwargs. If it does, and the temperature is greater than 500, print a warning with the temperature.\
+Also see if the keyword CO2level exists in kwargs. If it does, and the CO2level is greater than .15, print a warning with the CO2level.\
+Lastly, see if the keyword miscError exists in kwargs. If it does, print a warning with the miscError number.
+
+Test from main by creating five messages and calling the overseerSystem function with each message.
+
+<pre>
+Message1 is temperature:550
+Message2 is temperature:475
+Message3 is temperature:450, miscError:404
+Message4 is CO2level:.17
+Message5 is CO2level:.2, miscError:418
+</pre>
+
+**Part Four – Working with a list of functions** 
+We will be building a very basic baseball simulation, one that simulates one half inning of play.\
+Note: you don't have to know the rules of baseball in order to complete this problem - everything you need to know will be explained here.
+
+In our simulation, there will be five possible outcomes - out, single, double, triple, home run, each with it's own probability of occuring.
+
+Each of these outcomes will be represented by a short function that you will need to write. Each function does nothing but print the outcome and return a numeric value. Function out returns 0, single returns 1, double rteturns 2, triple returns 3, and homerun returns 4. For example, here's the out function:
+<pre>
+def out():
+    print("Out")
+    return 0
+</pre>
+Our simulation will generate outcomes within a loop until three outs have occured, at which time the simulation is complete.
+
+Outcomes will be randomly generated one at a time with the help of Pythons random.choices() method. The sequence parameter used by the choices method is a list of the outcome functions. Parameter weights is a list of probabilities, as given below. The k parameter value will be one, as we only want one outcome at a time. Here's some starter code:
+<pre>
+import random
+
+outcomes = list of functions - ***you need to write this - list should be in this order: out, single, double, triple, homerun***
+probabilities = [70, 18, 5, 1, 6]  #chance of an out is 70%, single is 18% and so on.
+
+#Start loop here - ***you need to write this***
+    outcome = random.choices(outcomes, weights = probabilities, k = 1)
+    ...
+</pre>
+
+Note that outcome is a list containing a single element.
+______________________
+## Unit G
+### Exercise G
+**Part One – Working with Files**
+
+Create a new file called ZenOfPython.txt and write the first two lines of the Zen of Python to the file. Close the file.
+
+Reopen the file and append the 7th and the 17th lines. Then close the file.
+
+Open the file again and read and print the entire contents of the file (there shouldn't be any blank lines between the text).
+Then close the file.
+
+Sample Execution Results:
+<pre>
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Readability counts.
+If the implementation is hard to explain, it's a bad idea.
+</pre>
+
+**Part Two – CSV Files**
+
+For this exercise, you will need to download the file Cities.csv from Canvas and save it into the same directory as your Python script. To do this, login to Canvas, select CIS 41A, select Files, select Cities.csv, select Download, and save into the same directory with your unit G in-class Python script.
+
+The file contains a list of cities, their state, and their population. The file starts with a header row of field names, which are City, State, Population.
+
+You will need to save this data (but not the header data) into a dictionary. The dictionary key will be a tuple consisting of the name of the city and the name of the state. The dictionary value will be the population.
+The reason for this structure is that there are a number of duplicate city names within the file, but no duplicate city/state pairs.
+
+Hint: When you create your reader object, you should use the DictReader from the csv module. Because the file contains a header row of field names, we don’t have to explicitly define them when creating the reader object. However, you should use these field names instead of numerical indexes when working with the row data.
+
+After reading the csv file, iterate through the dictionary and print the data.
+
+Then, ask the user for a city and state, then print that city’s population, if it exists.
+Test with Dublin, California.
+
+Sample Execution Results:
+<pre>
+Athens Georgia 115452
+Athens Ohio 23832
+Berlin Connecticut 19866
+Berlin Wisconsin 5524
+Dublin California 46036
+Dublin Ohio 41751
+and so on...
+
+Please enter a city: Dublin
+Please enter a state: California
+Dublin California has a population of 46036
+</pre>
+
+### Problem G
+**Part One – Reading a data file**
+
+For this exercise, you will need to download the file States.txt from Canvas and save it into the same directory as your Python script.
+
+The file has 50 lines of data, one for each state in the Unites States. Each line of data contains three pieces of data separated by a space: the two letter abbreviation of the state's name, the region that the state is in, and the 2016 population of the state.
+
+You need to find and print the state with the highest population in the Midwest region.
+
+Note: file States.txt is not a csv file - don't try to read it with a csv reader.
+
+Example output:
+<pre>
+Highest population state in the Midwest is: IL 12802000
+</pre>
+
+**Part Two – A Dictionary of Lists**
+
+Download the file USPresidents.txt from from Canvas and save it into the same directory as your Python script.
+
+The file has 44 lines of data, one for each president in the history of the Unites States. Each line of data contains two pieces of data separated by a space: the two letter abbreviation of the name of the state where the president was born, and the name of the president (for your convenience, the president's name has been converted to a single string – George Washington has been converted to George_Washington).
+
+Using the data from the file, you need to build a dictionary of states and the presidents born in those states. Each key will be a state abbreviation and each value will be a list of presidents. Use defaultdict to initialize the dictionary so that its default values are empty lists.
+
+After building the dictionary, determine the state with the most presidents and how many presidents were born there. Print their names.
+
+Example output:
+<pre>
+The state with the most presidents is VA with 8 presidents:
+George_Washington
+James_Madison
+James_Monroe
+John_Tyler
+And so on...
+</pre>
+
+**Part Three – Dictionary Keys and Sets**
+
+Using a dictionary comprehension, build a new dictionary from the data in the Part Two dictionary. Each key will again be a state abbreviation, however, the value will be the count of presidents from that state.
+
+Create a set of the ten most populous US states (CA, TX, FL, NY, IL, PA, OH, GA, NC, MI).
+Note - take this a a given - you do not have to find these ten states on your own.
+
+Then, using a set operator, create a new set that represents a set of populous US states that have had presidents born in them.
+
+Print a count of this new set along with an alpha-sorted listing of these states and how many presidents have been born in them.
+
+Example output:
+<pre>
+8 of the 10 high population states have had presidents born in them:
+CA 1
+GA 1
+IL 1
+NC 2 
+And so on...
+</pre>
+__________________________________
 
 
