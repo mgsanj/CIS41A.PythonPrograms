@@ -605,5 +605,259 @@ NC 2
 And so on...
 </pre>
 __________________________________
+## Unit H
+### Exercise H
+**Part 1 - A Basic Class - State Data**
 
+Create a StateData class with the following methods: __init__, __str__, displayState.\
+Note: __ is two underline characters (dunder).
+
+The __init__ method should have the parameters self, name, abbreviation, region, and population and should store the name, abbreviation, region, and population as attributes.
+
+The __str__ method has the parameter self and should return the state's name.
+
+The displayState method has the parameter self and should print formatted state data as shown below.
+
+Test the class by creating an instance of the class (instantiating) called s1 with the following data: "California", "CA", "West", 39250000. Print your state object (this will call the __str__ method). Then call displayState. This test code should be after your class code - don't worry about calling from main.
+
+Sample Execution Results:
+<pre>
+California
+California (CA) is in the West region and has population of 39250000
+</pre>
+
+**Part 2 - Different ways of working with Attributes**
+
+Here we explore different ways to work with Python attributes. Note that, while one of the approaches we are using is set/get, this approach is generally deprecated in favor of the simpler dot notation.
+
+Create a StateData2 class with the following methods: __init__, setRegion, getRegion.
+
+The __init__ method should have the parameters self, name and should store the name as an attribute.
+
+The setRegion should have the parameters self, region and should store the region as an attribute.
+
+The getRegion should have the the parameter self and should return the the value of the region data variable.
+
+Test the class by creating an instance of the class called s2 with the following data: "California". Then call setRegion with the argument "West". Then set the population attribute with the following line of code: s2.pop = 39250000
+
+Then print four lines: s2.name, s2.getRegion(), s2.region, s2.pop
+
+Again, this test code should be after your class code.
+
+Sample Execution Results:
+<pre>
+California
+West
+West
+39250000
+</pre>
+
+**Part 3 - Data Hiding**
+
+Data hiding within Python is achieved with the use of special naming conventions: beginning an attribute name with either a single underscore (protected) or a double underscore (private).
+
+Create a StateData2 class with the following method: __init__.
+
+The __init__ method should have the parameter self. It should store the value "Public" in an attribute called public, the value " Protected" in an attribute called _protected (use a single underscore), and the value " Private" in an attribute called __private (use a double underscore).
+
+Test the class by creating an instance of the class called test.
+
+Try to print three lines: test.public, test._protected, test.__private
+
+Sample Execution Results:
+<pre>
+Public
+Protected
+Traceback error
+</pre>
+
+### Problem H
+
+**Part One - Operator Overloading**
+
+We will be building a BritCoins class that allows you to work with British money as it was denominated up to 1971. While there were a variety of types of coins, we will only be concerned with pounds, shillings, and pennies. A shilling was worth 12 pennies, and a pound was worth 20 shillings. Therefore, a pound was worth 240 pennies.
+
+The class will allow you to initialize a BritCoins object with any given amount of pounds, shillings and pennies, add and subtract BritCoins objects, and to print a string that represents the value of the coins used to initialize a BritCoins object.
+
+Certain aspects of the BritCoins class will parallel the Length class example shown here: [magic methods](https://www.python-course.eu/python3_magic_methods.php)(scroll down to the Example class: Length section). However, there will be some significant differences.
+
+The idea of the BritCoins class is that you will pass the class a dictionary of coinTypes (keys) and the quantities of each coinType (values). In other words, we will be using kwargs as we did in the third exercise of the Lab H Takehome. The class will then calculate how many pennies these coins represent and save this totalPennies value. The totalPennies value will later be used for addition and subtraction as well as for generating the coin value string.
+
+Building the class:
+
+Create a BritCoins class with the following methods: __init__, __add__ , __sub__ , __str__. There will also be a private class dictionary called \__coinValues as follows (this is similar to the \__metric variable in the Length example).
+
+\__coinValues = {"pound":240, "shilling":12, "penny":1} #value of each type of coin in pennies
+
+The __init__ method should have the parameters self, and \**kwargs. Start by initializing a self.totalPennies attribute to zero. Then iterate through the kwargs. For each coinType in kwargs, add the value in pennies of that type and quantity of coin to a self.totalPennies. Determine this value by multiplying the number of coins (get this from kwargs) by the coin value (get this from \__coinValues - do not hardcode the values!). As an example, if init receives 4 pound, 3 shilling and 2 penny, totalPennies should be 998 (4*240+3*12+2*1).
+
+The __add__ method should have the parameters self and other. Calculate a local total by adding self.totalPennies to other.totalPennies. Then return this value. However, there are two crucial considerations here. The first is that when we add two BritCoins objects, the result of this addition should also be a BritCoins object. Therefore, what we want to return isn't the total, but is instead a new BritCoins object that has been initialized with the appropriate coinage. So, we need to create and return an instance of the class. We can do this within the class itself! The second consideration is that when we create this instance, we need to provide an appropriate argument for BritCoins. We can't just pass the total (of say, 998) - we need to pass a dictionary like {"penny":998}. Further, we need to use appropriate notation when making this BritCoins call (as you did when testing the overseerSystem function in the Lab H Takehome).
+
+The __sub__ method should have the parameters self and other. It is similar to the add method except that you subtract other from self instead of adding it.
+
+The __str__ method has the parameter self and should return a string that represents the value of the BritCoins object. The string should be formatted as shown below, showing pounds, shillings and pennies. From self.totalPennies, you will need to calculate how many of each coin type there are using floor division or some other technique. Note that this string representation won't necessarily be the coins used to initialize the BritCoins object - it will be the value of the BritCoins object. For example, if the BritCoins object was initialized with 25 shillings, the return should be 1 pounds 5 shillings 0 pennies.
+
+For this script, the test code should be after your class code – don't worry about calling from main.
+
+Test the BritCoins class with the following data:
+
+c1 = 4 pound, 24 shilling, 3 penny\
+c2 = 3 pound, 4 shilling, 5 penny\
+c3 = c1 + c2\
+c4 = c1 - c2
+
+Then print c1, c2, c3 and c4.
+
+**Part Two - Pickling**
+
+Here, we will pickle (save/serialize) a Python object structure to a file and then unpickle (retrieve/de-serialize) it.
+
+Pickle Britcoin c4, then unpickle and print it.
+
+Sample Execution Results:
+<pre>
+5 pounds 4 shillings 3 pennies
+3 pounds 4 shillings 5 pennies
+8 pounds 8 shillings 8 pennies
+1 pounds 19 shillings 10 pennies
+
+1 pounds 19 shillings 10 pennies
+</pre>
+_______________________________
+## Unit I
+### Exercise I
+**Part 1 of 1 - Basic Inheritance - Circle & Cylinder**
+
+You will be creating a Circle base (parent) class and a Cylinder class that inherits from it (child).\
+Both classes and the code to test the classes will be contained within a single script.
+
+The Circle class has the following methods: __init__, getArea.\
+Circle's __init__ method should have the parameters self and radius, and should store the radius as an attribute.\
+The getArea method has the parameter self and should return the circle's area (use the pi constant from the math module when calculating the area).
+
+The Cylinder class inherits from the Circle class and has the following methods: __init__, getVolume.\
+Cylinder's __init__ method should have the parameters self, radius and height. From within Cylinder's __init__, call Circle's __init__ to store the radius. The height should be stored as an attribute of the Cylinder.\
+The getVolume method has the parameter self and should use the getArea method and calculate and return the cylinder's volume. See: volume of a cylinder
+
+Test by creating an instance of the Circle class with a radius of 4. Print the area of the circle, rounded to 2 places.\
+Then, create an instance of the Cylinder class with a radius of 2 and a height of 5. Print the volume of the cylinder, rounded to 2 places.
+
+### Problem I
+**Part 1 of 1 - Inheritance with Multiple Children**
+
+We will be building a suite of three classes to manage library patrons and the books that they check out (a library patron is someone who has a library account).\
+All three classes and the code to test the classes will be contained within a single script.
+
+The library has two types of patrons, adult and juvenile, and two types of books, adult and juvenile. Juvenile patrons can only check out juvenile books, while adult patrons can check out any type of book. Additionally, juvenile patrons have a limit of 2 books that they may have checked out at one time, while adult patrons have a limit of 4 books that they may have checked out at one time.
+
+We will write three classes: a parent LibraryPatron class, and AdultPatron and JuvenilePatron child classes. Ideally, we would also have a Book class, but we will simplify things here by making a book be a list with two elements: the title, and the book type - adult or juvenile (see the testing code below).
+
+**LibraryPatron class:**
+
+The LibraryPatron class has the following four methods: __init__, checkOutBook, returnBook, and printCheckedOutBooks.
+
+The __init__ method should have the parameters self and name, and should store the name as an attribute (name is the name of the patron). There should also be an additional attribute called booksCheckedOut which should be initialized as an empty list. This attribute will store a list of the book titles that the patron currently has checked out.
+
+The checkOutBook method should have the parameters self, checkOutLimit and bookTitle. If the patron is at their checkout limit, print a "Sorry" message to the patron. Otherwise, append the bookTitle to the patron's booksCheckedOut list and print a "Checkout" message, as shown below.
+
+The returnBook method should have the parameters self and book. Here, book is a book list object - you will need to extract the book title from the list. Remove the book title from the patron's list of checked out book titles and print a "returned" message.
+
+The printCheckedOutBooks method should have the parameter self. Print a message along and print all the patron's checked out book titles, as shown below.
+
+**AdultPatron class:**
+
+The AdultPatron class inherits from the LibraryPatron class and has the following two methods: __init__, checkOutBook.
+
+The __init__ method should have the parameters self and name. Call LibraryPatron's __init__ to store the name. There should also be an additional attribute called checkOutLimit which should be initialized with a value of 4.
+
+The checkOutBook method should have the parameters self and book. Here again, book is a book list object. Call LibraryPatron's checkOutBook method, using the patron's checkOutLimit and the book title as arguments.
+
+**JuvenilePatron class:**
+
+The JuvenilePatron class inherits from the LibraryPatron class and has the following two methods: __init__, checkOutBook.
+
+The __init__ method should have the parameters self and name. Call LibraryPatron's __init__ to store the name. There should also be an additional attribute called checkOutLimit which should be initialized with a value of 2.
+
+The checkOutBook method should have the parameters self and book. Here again, book is a book list object. If the book is not a a juvenile book, print a "Sorry" message as shown below. Otherwise, call LibraryPatron's checkOutBook method, using the patron's checkOutLimit and the book title as arguments.
+
+Test with the following code:
+<pre>
+    book1 = ["Alice in Wonderland", "Juvenile"]
+    book2 = ["The Cat in the Hat", "Juvenile"]
+    book3 = ["Harry Potter and the Sorcerer's Stone", "Juvenile"]
+    book4 = ["The Hobbit", "Juvenile"]
+    book5 = ["The Da Vinci Code", "Adult"]
+    book6 = ["The Girl with the Dragon Tattoo", "Adult"]
+    
+    patron1 = JuvenilePatron("Jimmy")
+    patron2 = AdultPatron("Sophia")
+
+    patron1.checkOutBook(book6)
+    patron1.checkOutBook(book1)
+    patron1.checkOutBook(book2)
+    patron1.printCheckedOutBooks()
+    patron1.checkOutBook(book3)
+    patron1.returnBook(book1)
+    patron1.checkOutBook(book3)
+    patron1.printCheckedOutBooks()
+    patron2.checkOutBook(book5)
+    patron2.checkOutBook(book4)
+    patron2.printCheckedOutBooks()
+</pre>
+__________________________________
+## Unit J
+### Exercise J
+In this exercise we will be working with regular expressions that can be used to match something in a string.
+In the subsequent Problem J, we will write Python code that uses regular expressions in functions imported from the re module .
+
+**1. Write Regular Expressions that match:**
+- zero or more A
+- one or more A
+- zero or one A
+- two or three A
+
+**2. What do these Regular Expressions match?**
+- AB{3}
+- (AB){3}
+
+**3. Given the following regular expression: [^A-G] which of the following strings contain a match for this regular expression**
+- A
+- AB
+- ADBC
+- D
+
+**4. Write a regular expression that matches a string containing exactly three characters.**
+
+### Problem J
+
+**Problem J part 1**
+
+Read text input into a variabale named data.\
+Write a raw sting containing a regular expression that matches a lower case a.\
+Use the search function to see if the variable data contains a match. Print found if found, otherwise print not found.\
+Test twice: with two presidents of the United States: "Harry S. Truman" and then "Dwight D. Eisenhower".
+
+**Problem J part 2**
+
+Read text input into a variabale named data.\
+Write a raw sting containing a regular expression that contains a lower case b followed by a dot: 'b.'\
+Use the findall function obtain a list of matching substrings. Print the resulting list.\
+Test once with the string:\
+"Dobby Rebeus Longbottom Gabrielle Albus"
+
+**Problem J part 3**
+
+Read text input into a variabale named data.\
+Write a raw sting containing a regular expression that matches a space.\
+Use the split function obtain a list of substrings seperated by a space. Print the resulting list.\
+Test once with the string:\
+"Bill Charlie Percy Fred George Ron Ginny"
+
+**Problem J part 4**
+
+Read text input into a variabale named data.\
+Write a raw sting containing a regular expression that matches a lower case th\
+Us the sub function to change 'th' to 'lore'. Print the resulting string.\
+Test once with the string:\
+"thlei, th, and folk tales"
 
