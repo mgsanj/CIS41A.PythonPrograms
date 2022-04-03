@@ -53,7 +53,62 @@ _________________________
 - Hint: Except for the first find, set the start location for the next find as the previous location found index + 1. The second argument in the find method is the index where the find starts looking.
 
 ### Problem B
+#### First Script - Working with Strings
+This script contains four parts.
 
+**1) String Type Tests**
+- Ask the user for a string (test with "ABC123").
+- Use method isupper to test the string, print the result.
+- Use method isdigit to test the string, print the result.
+- Use method isalpha to test the string, print the result.
+
+**2) Escape Characters within a string**
+Use newline escape characters within a line of haiku
+
+- Assign the text "Type, type, type away. Compile. Run. Hip hip hooray! No error today!" to a single variable (be sure to add newline escape characters). This should be done in a single line of code.
+- Print, so that the output appears as follows:
+<pre>
+Type, type, type away.
+Compile. Run. Hip hip hooray!
+No error today!
+</pre>
+Haiku by Samantha W.
+
+**3) Slicing a string**
+- Assign the text "And now for something completely different" to a variable called quote.
+- Slice quote to obtain the text "And no" from the beginning of the quote, print the results.
+- Slice quote to obtain the text "rent" from the end of the quote, print the results.
+- Slice quote to obtain the text "me" from the middle of the quote, print the results.
+- Slice quote to obtain the text "Adnwf..." by extracting every other letter, print the results.
+- Slice quote to obtain the text "tnere..." by reversing the quote, print the results.
+**4) Using string operators + and ***
+- Assign the text ".\~*'" to a variable called pattern1.
+- Create a variable called pattern2, assign to it pattern1 combined with pattern1 reversed. pattern2 should now contain the string ".\~*''*\~."
+Print pattern2 repeated five times. The output should appear as follows:
+.\~*''*\~..\~*''*\~..\~*''*\~..\~*''*\~..\~*''*\~.
+      
+#### Second Script:
+**Printing a well formatted invoice**
+
+Use three named "constants" for the following prices:
+Small beads have a price of 10.20 dollars per box.
+Medium beads have a price of 8.52 dollars per box.
+Large beads have a price of 7.98 dollars per box.
+
+Ask the user how many boxes of small beads, how many boxes of medium beads, and how many large beads they need (use the int Built-in Function to convert these values to int).
+
+Print the invoice in the following format:
+<pre>
+SIZE      QTY    COST PER BOX      TOTALS
+Small       n            x.xx       xx.xx
+Medium      n            x.xx       xx.xx
+Large       n            x.xx       xx.xx
+TOTAL                              xxx.xx
+</pre>
+
+Replace the n and x placeholders with actual numeric data values. Right align all numeric values. All dollar amounts should have two decimal places and should align on the decimal point.
+
+Test your script twice, first with user input of 10 boxes of small beads, 9 boxes of medium beads, and 8 boxes of large beads, and then a second time with user input of 5 boxes of small beads, 10 boxes of medium beads, and 15 boxes of large beads.
 
 
 
