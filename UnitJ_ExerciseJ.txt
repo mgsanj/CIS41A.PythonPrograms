@@ -1,0 +1,15 @@
+import re
+
+1a. r'A{0,}'
+1b. r'A{1,}'
+1c. r'A{0,1}'
+1d. r'A{2,3}'
+
+2a.ABBB
+2b.ABABAB
+
+3.[^A-G] 
+None
+
+4. r'^.{3}$'
+
