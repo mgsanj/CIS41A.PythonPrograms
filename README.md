@@ -1,5 +1,17 @@
 # CIS41A: Python Programs
 This contains all of the programs I've written for the Python Programming class I took at De Anza College. These are all my original work and I've also included descriptions of the problems below. 
+__________________________________
+## Table Of Contents
+* [Unit A: Data: Types, Values, Variables, Names, and Numbers](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-a)
+* [Unit B: Text Strings](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-b)
+* [Unit C: Dealing with Data, Tuples and Lists](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-c)
+* [Unit D: Tuples and Lists, Dictionaries and Sets, Objects and Classes](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-d)
+* [Unit E: if, while, and for loops](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-e)
+* [Unit F: Functions](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-f)
+* [Unit G: Modules, Files, Directories, Storing Data](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-g)
+* [Unit H: Objects and Classes](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-h)
+* [Unit I: Objects and Classes Cont.](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-i)
+* [Unit J: Text Strings: RegEx](https://github.com/mgsanj/CIS41A.PythonPrograms/edit/main/README.md#unit-j)
 ___________________________________
 ## Unit A
 ### Exercise A
