@@ -1,6 +1,6 @@
 '''
 Sanjana Gadaginmath
-CIS 41A   Fall 2022
+CIS 41A   Winter 2022
 Unit A, Exercise A
 '''
 rect_height = 2.9
