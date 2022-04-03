@@ -287,7 +287,7 @@ Raging Bull:1980
 - Loop through the dictionary items and print the year in which each movie was made. Output should be alpha sorted by movie title.
 
 ### Problem E
-**First Script – Decision Making**
+#### First Script – Decision Making
 
 Write a script that can determine where different plants can be planted.
 
@@ -318,7 +318,7 @@ A Lily can be planted in the Low Garden or the High Garden.
 and so on...
 </pre>
 
-**Second Script – Guessing Game**
+#### Second Script – Guessing Game
 
 Write a script that plays a simple guessing game.
 The script will generate a secret number from 1 to 100, inclusive, and the user will have to guess the number.
