@@ -109,6 +109,78 @@ TOTAL                              xxx.xx
 Replace the n and x placeholders with actual numeric data values. Right align all numeric values. All dollar amounts should have two decimal places and should align on the decimal point.
 
 Test your script twice, first with user input of 10 boxes of small beads, 9 boxes of medium beads, and 8 boxes of large beads, and then a second time with user input of 5 boxes of small beads, 10 boxes of medium beads, and 15 boxes of large beads.
+_________________________
+## Unit C
+### Exercise C
+**List Script**
+- Create a list called list1 that has elements 2, 4.1, 'hello'.
+- Copy list1 to list2 so that list2 is an alias of list1 (shallow copy).
+- Copy list1 to list3 so that list3 is a new list (true deep copy).
+- Using ==, compare list1 to list2, list1 to list3, and list2 to list3.
+- Using is, compare list1 to list2, list1 to list3, and list2 to list3.
+- Print the ids of list 1, list2, and list3.
+- Append a new element with value 8 to list1.
+- After the first element of list2, insert an element 'goodbye'.
+- Remove the first element from list3.
+- Print each of the three lists. Do the results match what you expected?
 
+### Problem C
+#### First Script – Working with Lists
+**All print output should include descriptions as shown in the example output below.**
+- Create an empty list called list1
+- Populate list1 with the values 1,3,5
+- Swap the second and third elements of list1.
+- Iterate over list1 and print its items.
+- Create list2, initialized with the values 1,2,3,4
+- Create list3 by combining list1 and list2 (use the + operator).
+- Print list3.
+- Use sequence operator in to test list3 to see if it contains a 3, print True/False result (do with one line of code).
+- Count the number of 3s in list3, print the result.
+- Determine the index of the first 3 in list3, print the result.
+- Pop this first 3 and assign it to a variable called first3, print first3.
+- Create list4, populate it with list3's sorted values, using the sorted built-in function.
+- Print list3.
+- Print list4.
+- Slice list3 to obtain a list of the values 1,2,3 from the middle of list3, print the result.
+- Determine the length of list3, print the result.
+- Determine the max value of list3, print the result.
+- Sort list3 (use the list sort method), print list3.
+- Create list5, a list of lists, using list1 and list2 as elements of list5.
+- Print list5.
+- Print the value 4 contained within list5.
 
+Example output:
+<pre>
+d) Items in list1:
+1
+5
+3
+g) list3 is: [1, 5, 3, 1, 2, 3, 4]
+h) list3 contains a 3: True
+i) list3 contains 2 3s
+j) The index of the first 3 contained in list3 is 2
+k) first3 = 3
+m) list3 is now: [1, 5, 1, 2, 3, 4]
+n) list4 is: [1, 1, 2, 3, 4, 5]
+o) Slice of list3 is: [1, 2, 3]
+p) Length of list3 is 6
+q) The max value in list3 is 5
+r) Sorted list3 is: [1, 1, 2, 3, 4, 5]
+t) list5 is: [[1, 5, 3], [1, 2, 3, 4]]
+u) Value 4 from list5: 4
+</pre>
 
+#### Second Script – Bit Operators
+- Assign the values 9 and 14 to variables a and b respectively.
+- Print the binary values of a and b (use the bin built-in function).
+- Calculate the value of a and b, print the result in binary.
+- Calculate the value of a or b, print the result in binary.
+- Examine the results. Can you see how they were arrived at?
+
+Example output:
+<pre>
+a) binary of a =  0b1001
+b) binary of b =  0b1110
+c) binary of a & b =  0b1000
+d) binary of a | b =  0b1111
+</pre>
