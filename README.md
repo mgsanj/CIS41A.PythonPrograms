@@ -1,4 +1,4 @@
-# PythonPrograms
+# CIS41A: Python Programs
 This contains all of the programs I've written for the Python Programming class I took at De Anza College. These are all my original work and I've also included descriptions of the problems below. 
 ___________________________________
 ## Unit A
@@ -184,3 +184,111 @@ b) binary of b =  0b1110
 c) binary of a & b =  0b1000
 d) binary of a | b =  0b1111
 </pre>
+_______________________
+## Unit D
+### Exercise D
+**1) Dictionary Basics:**
+- Create a dictionary of fruit and desserts made from the fruit. The fruit should be the key and the dessert should be the value. Use these key value pairs:
+
+apple:sauce\
+peach:cobbler\
+carrot:cake\
+strawberry:sorbet\
+banana:cream pie
+- Add the mango fruit to the dictionary. Its dessert is sticky rice.
+- Change the strawberry dessert to shortcake.
+- Carrot is not a fruit, so remove carrot from the dictionary.
+- Print the apple dessert.
+- See if a banana dessert exists.
+- See if a pear dessert exists.
+- Print the keys in the dessert dictionary.
+- Print the values in the dessert dictionary.
+- Print the key-value pairs in the dessert dictionary.
+**2) Combining dictionaries:**
+- Create a dictionary named capitols1 and populate it with these key value pairs:
+
+Alabama:Montgomery\
+Alaska:Juneau\
+Arizona:Phoenix\
+Arkansas:Little Rock\
+California:Sacramento
+- Create a dictionary named capitols2 and populate it with these key value pairs:
+
+California:Sac.\
+Colorado:Denver\
+Connecticut:Hartford
+- Be sure that the California capitol is Sac. and not Sacramento.
+- Using the dictionary update() method, update capitols1 with capitols2.
+- Print the sorted capitols (values). Note the updated value of California's capitol.
+**3) Sets Basics:**
+- Create a set named class1 and populate it with the students Li, Audry, Jia, Migel, Tanya.
+- Create a set named class2 and populate it with the students Sasha, Migel, Tanya, Hiroto, Audry.
+- Add John to class1.
+- Print a sorted list of students who are in both classes.
+- Print a sorted list of all students.
+- Test to see if Sasha is in class1.
+
+### Problem D
+**Part One - List Comprehension**
+
+Using a list comprehension, generate a list of the first 10 Triangle numbers. If you've never learned about Triangle numbers, this site has everything you need to know. As detailed on the website, the formula to calculate the nth term in the sequence is n*(n+1)/2.
+
+**Part Two - Sets**
+- Create a set named class1 and populate it with the students Li, Audry, Jia, Migel, Tanya.
+- Create a set named class2 and populate it with the students Sasha, Migel, Tanya, Hiroto, Audry.
+- Create a set named class3 and populate it with the students Migel, Zhang, Hiroto, Anita, Jia.
+- Using set operators or set methods, generate a set of students who are in all three classes. Print a sorted list of these students.
+- Using set operators or set methods, generate a set of all students. Print a sorted list of these students.
+- Using set operators or set methods, generate a set of students in class1 but not class2 or class3. Print a sorted list of these students.
+- Using a set comprehension, generate a set of all students who are in class2 but not in class1. Print a sorted list of these students.
+
+**Part Three – Tuple Basics**
+
+For Parts Three, Four and Five, you will be working with data about the movie Casablanca.
+
+- Create a tuple that contains the elements Casablanca, 1942, romantic drama.
+- Unpack the tuple into variables title, year, genre.
+- Print the genre.
+
+**Part Four – Named Tuple**
+
+- Define a named tuple called Movie that contains the fields title, year, genre.
+- Create a Movie tuple that contains the elements Casablanca, 1942, romantic drama.
+- Print the title.
+
+**Part Five – Named Tuple Containing a List**
+- Define a named tuple called Moviestars that contains the fields title, year, genre, stars.
+- Create a Moviestars tuple called favoritemovie that contains the elements Casablanca, 1942, romantic drama, and a list containing elements Humphrey Bogart, Ingrid Bergman.
+- Append Claude Rains to the stars list. Hint: Use the syntax favoritemovie.stars.append
+- Print star Ingrid Bergman.
+- Print favoritemovie.
+- Note that, even though a tuple is immutable, we are able to change a list that is contained by a tuple.
+__________________________
+## Unit E
+### Exercise E
+**Part One - If Logic**
+
+- Create a list called scifi that contains the elements Alien, Solaris, Inception, Moon.
+ -Create a list called comedy that contains the elements Borat, Idiocracy, Superbad, Bridesmaids.
+- Ask the user for the name of a movie.
+- Using if/elif/else, determine and print the genre of the movie.
+- Test three times: first with Moon, then Superbad, then Dunkirk.
+**Part Two - Using Range**
+
+- Use a for loop to print the even integers in descending order from 10 to 0 inclusive.
+
+**Part Three - Looping Through Dictionary Items**
+- Create a dictionary named movies and populate it with these key value pairs:
+
+The Wizard of Oz:1939\
+The Godfather:1972\
+Lawrence of Arabia:1962\
+Raging Bull:1980
+- Loop through the dictionary items and print the year in which each movie was made. Output should be alpha sorted by movie title.
+
+### Problem E
+
+
+
+
+
